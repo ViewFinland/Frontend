@@ -61,3 +61,4 @@ class InteractiveMap extends Component
 export default GoogleApiWrapper({
     apiKey: api_key
 })(InteractiveMap);
+

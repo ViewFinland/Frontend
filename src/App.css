@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: gray;
 }
 
 .App-logo {
@@ -22,7 +23,17 @@
 }
 
 .plan-journey {
-  background: black;
   align-items: center;
   position: relative;
+}
+
+.select-box {
+  margin: 5%;
+  border: double;
+}
+
+.navigation-buttons {
+  position: bottom;
+  margin: 5%;
+  padding: 5%;
 }

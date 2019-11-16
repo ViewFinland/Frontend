@@ -10,6 +10,9 @@ class ConfigureJourneyView extends React.Component {
                 <Button href="/filtering">
                   <p>Back</p>
                </Button>
+               <Button href="/">
+                  <p>Home</p>
+               </Button>
                <Button href="/notice">
                   <p>Next</p>
                </Button>

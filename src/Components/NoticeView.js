@@ -11,6 +11,9 @@ class NoticeView extends React.Component {
                 <Button href="/journeyconfig">
                   <p>Back</p>
                </Button>
+               <Button href="/">
+                  <p>Home</p>
+               </Button>
                <Button href="/navigation">
                   <p>Next</p>
                </Button>

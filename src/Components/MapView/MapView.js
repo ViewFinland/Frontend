@@ -11,3 +11,5 @@ class MapView extends Component
         )
     }
 }
+
+export default MapView;

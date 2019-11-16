@@ -18,7 +18,7 @@ class LandingPage extends React.Component {
                </Button>
             </div>
             <div className="plan-journey">
-               <Button href="/filtering">
+               <Button size="lg" href="/filtering">
                   <p>Plan Journey</p>
                </Button>
             </div>

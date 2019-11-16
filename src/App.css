@@ -1,10 +1,9 @@
 .App {
   text-align: center;
-  background: gray;
-}
-
-.App-logo {
-  height: 40vmin;
+  background: #245027;
+  width: 100vw;
+  height: 100vh;
+  color: white;
 }
 
 .App-header {
@@ -18,13 +17,10 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
-}
-
 .plan-journey {
   align-items: center;
-  position: relative;
+  position: 80vh;
+  margin-top:50%;
 }
 
 .select-box {
@@ -33,7 +29,21 @@
 }
 
 .navigation-buttons {
-  position: bottom;
+  position: 80vh;
   margin: 5%;
   padding: 5%;
+}
+
+.btn-primary {
+  background-color: white !important;
+  color: black !important;
+  border-color: black !important;
+}
+
+.btn-primary:active .btn-primary:hover .btn-primary:selected {
+  background-color: #d0d0d0 !important;
+}
+
+.login-buttons {
+  margin-top: 15vh;
 }

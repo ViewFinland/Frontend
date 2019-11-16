@@ -6,18 +6,22 @@ class LandingPage extends React.Component {
    render() {
       return (
          <div>
-            <div>
+            <div className="title">
                <h1>ViewFinland</h1>
             </div>
-            <Button >
-               <p>Login</p>
-            </Button>
-            <Button>
-               <p>Sign up</p>
-            </Button>
-            <Button href="/filtering">
-               <p>Plan Journey</p>
-            </Button>
+            <div className="login-buttons">
+               <Button disabled={true}>
+                  <p>Login</p>
+               </Button>
+               <Button disabled={true}>
+                  <p>Sign up</p>
+               </Button>
+            </div>
+            <div className="plan-journey">
+               <Button href="/filtering">
+                  <p>Plan Journey</p>
+               </Button>
+            </div>
          </div>
       )
    }

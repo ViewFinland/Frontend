@@ -6,6 +6,7 @@ import LandingPage from './Components/LandingPage';
 import NavigationView from './Components/NavigationView';
 import NoticeView from './Components/NoticeView';
 import createBrowserHistory from 'history';
+import styles from './App.css';
 
 class App extends React.Component {
    render() {

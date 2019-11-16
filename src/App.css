@@ -31,3 +31,9 @@
   margin: 5%;
   border: double;
 }
+
+.navigation-buttons {
+  position: bottom;
+  margin: 5%;
+  padding: 5%;
+}

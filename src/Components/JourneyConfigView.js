@@ -7,10 +7,10 @@ class ConfigureJourneyView extends React.Component {
           <div>
              <h1>Journey configuration thingy?</h1>
              <div className="navigation-buttons">
-                <Button href="">
+                <Button href="/filtering">
                   <p>Back</p>
                </Button>
-               <Button href="/journeyconfig">
+               <Button href="/notice">
                   <p>Next</p>
                </Button>
             </div>

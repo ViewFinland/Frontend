@@ -46,7 +46,7 @@ class FilterView extends React.Component {
                 </div>
             </div>
             <div className="navigation-buttons">
-                <Button href="">
+                <Button href="/">
                   <p>Back</p>
                </Button>
                <Button href="/journeyconfig">

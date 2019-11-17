@@ -61,14 +61,14 @@ class FilterView extends React.Component {
                 <h2>Select activities:</h2>
                 <div>
                     <ToggleButtonGroup type="checkbox" name="Activities">
-                        <ToggleButton value="Hiking" onChange={() => this.setActivities("Hiking")}>Hiking</ToggleButton>
-                        <ToggleButton value="activity 2"onChange={() => this.setActivities("Camping")}>Camping</ToggleButton>
-                        <ToggleButton value="activity 3"onChange={() => this.setActivities("Fishing")}>Fishing</ToggleButton>
+                        <ToggleButton onChange={() => this.setActivities("Hiking")}>Hiking</ToggleButton>
+                        <ToggleButton onChange={() => this.setActivities("Camping")}>Camping</ToggleButton>
+                        <ToggleButton onChange={() => this.setActivities("Fishing")}>Fishing</ToggleButton>
                     </ToggleButtonGroup>
                     <ToggleButtonGroup type="checkbox" name="Activities">
-                        <ToggleButton value="activity 4"onChange={() => this.setActivities("Canoeing")}>Canoeing</ToggleButton>
-                        <ToggleButton value="activity 5"onChange={() => this.setActivities("Act5")}>Act5</ToggleButton>
-                        <ToggleButton value="activity 6"onChange={() => this.setActivities("Act6")}>Act6</ToggleButton>
+                        <ToggleButton onChange={() => this.setActivities("Canoeing")}>Canoeing</ToggleButton>
+                        <ToggleButton onChange={() => this.setActivities("Bird-watching")}>Bird-watching</ToggleButton>
+                        <ToggleButton onChange={() => this.setActivities("Rock-climbing")}>Rock-climbing</ToggleButton>
                     </ToggleButtonGroup>
                 </div>
             </div>

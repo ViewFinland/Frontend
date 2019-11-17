@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import soundfile from '../Audio/slow_food_insight.mp3';
 
 class NoticeView extends React.Component {
    constructor(props){
@@ -10,6 +11,7 @@ class NoticeView extends React.Component {
       }
    }
 
+   
    render() {
       return (
          <div>

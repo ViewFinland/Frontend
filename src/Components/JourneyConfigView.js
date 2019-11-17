@@ -280,6 +280,7 @@ class ConfigureJourneyView extends React.Component {
 
     render() {
        return (
+<<<<<<< HEAD
             <div className="journey-layout">
                <div className="navigation-buttons">
                   <Button href="/filtering">
@@ -299,6 +300,25 @@ class ConfigureJourneyView extends React.Component {
                      routes={this.state.routes}
                   />
                </div>
+=======
+          <div>
+            <div className="interactive-map">{
+               //<h2>Interactive Map</h2>
+               //<InteractiveMap markers={this.state.markers} />
+            }
+            </div>
+             <div className="navigation-buttons">
+                <Button href="/filtering">
+                  <p>Back</p>
+               </Button>
+               <Button href="/">
+                  <p>Home</p>
+               </Button>
+               <Button href="/notice">
+                  <p>Next</p>
+               </Button>
+            </div>
+>>>>>>> fb898723e7bb39150ba2cc2417f9e618af654279
           </div>
        )
     }

@@ -47,3 +47,16 @@
 .login-buttons {
   margin-top: 15vh;
 }
+
+h1 {
+  padding-top: 3vh;
+  color: #335f2b;
+}
+h2 {
+  color: rgb(85, 2, 78);
+}
+
+.cheat-menu {
+  background: linear-gradient(#480349, #ffb300);
+  color: white;
+}

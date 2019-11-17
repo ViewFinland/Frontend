@@ -5,6 +5,7 @@ import JourneyConfigView from './Components/JourneyConfigView';
 import LandingPage from './Components/LandingPage';
 import NoticeView from './Components/NoticeView';
 import QuizView from './Components/QuizView';
+import CheatMenu from './Components/CheatMenu';
 import NavigationView from './Components/NavigationView';
 import MapView from './Components/MapView/MapView';
 import createBrowserHistory from 'history';
@@ -26,6 +27,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={LandingPage}/>
               <Route path="/filtering" component={FilterView}/>
+              <Route path="/cheat" component={CheatMenu}/>
               <Route path="/journeyconfig" component={JourneyConfigView}/>
               <Route path="/navigation" component={NavigationView}/>
               <Route path="/notice" render={(props) => <NoticeView text={props.text} title={props.title}/> }/>

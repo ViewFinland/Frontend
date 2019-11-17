@@ -29,10 +29,10 @@ class QuizView extends React.Component {
 
    getAnswerTitle(wasCorrect){
        if(wasCorrect){
-            return  <h1>Correct!</h1>; 
+            return  <h2>Correct!</h2>; 
        }
         else{ 
-            return <h1>Wrong!</h1>;
+            return <h2>Wrong!</h2>;
         }
    }
 
@@ -41,7 +41,7 @@ class QuizView extends React.Component {
        const answeredRight = this.state.answeredCorrectly; // I'm just going to uglify this as much as I can. huehue #cleanestCode
     return (
         <div>
-            <h2>{this.state.question}</h2>
+            <h1>{this.state.question}</h1>
             {!answered? (
                 <div className="quiz-buttons">
                     <Button onClick={() => this.submitAnswer("a")}>{this.state.answerA}</Button>
@@ -53,7 +53,7 @@ class QuizView extends React.Component {
                     <div className="answer-description">
                         {this.getAnswerTitle(answeredRight)}
                         <h2>{this.state.description}</h2>
-                    </div> 
+                    </div>
                     <div className="navigation-buttons">
                         <Button href="/navigation"> Back </Button>
                         <Button href="/quizkid"> Kid </Button>

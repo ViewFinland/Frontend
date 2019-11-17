@@ -13,7 +13,6 @@ class LandingPage extends React.Component {
                <Button disabled={true}>
                   <p>Login</p>
                </Button>
-               <Button href="/quizkid"> hehehe </Button>
                <Button disabled={true}>
                   <p>Sign up</p>
                </Button>
@@ -22,6 +21,9 @@ class LandingPage extends React.Component {
                <Button size="lg" href="/filtering">
                   <p>Plan Journey</p>
                </Button>
+            </div>
+            <div>
+               <Button href="/cheat"> hehehe </Button>
             </div>
          </div>
       )

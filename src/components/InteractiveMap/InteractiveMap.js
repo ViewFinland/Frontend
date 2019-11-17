@@ -8,8 +8,8 @@ import { resolve } from 'dns';
 const api_key = process.env.REACT_APP_API_KEY || "Get your shit together";
 
 const mapStyles = {
-    margin: '5%',
-    height: '60%'
+    width: "50%",
+    height: "50%"
 };
 
 class InteractiveMap extends Component
@@ -82,7 +82,12 @@ class InteractiveMap extends Component
                         onClose={this.onClose}
                         >
                             <div>
-                                <h4>Meep</h4>
+                                <h4>
+                                    {
+                                        this.state.activeMarker == null ? 
+                                            "No Title Set!" : this.state.activeMarker.title
+                                    }
+                                </h4>
                             </div>
                     </InfoWindow>
                     {this.props.routes.map((route, index) => (

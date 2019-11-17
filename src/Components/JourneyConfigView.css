@@ -1,0 +1,20 @@
+.navigation-buttons {
+    grid-area: navigation;
+    z-index: 2;
+}
+
+.interactive-map {
+    grid-area: map;
+    z-index: 0;
+    width: 10%;
+    height: 50%;
+    margin-left: 25%;
+}
+
+.journey-layout {
+    display: grid;
+    grid-template-areas:
+        "navigation"
+        "map"
+    ;
+}

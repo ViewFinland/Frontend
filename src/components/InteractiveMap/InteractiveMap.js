@@ -14,27 +14,29 @@ const mapStyles = {
 
 class InteractiveMap extends Component
 {
-    constructor(props)
-    {
-        super(props);
-        this.showingInfoWindow = false;
-        this.activeMarker = {};
-        this.selectedPlace = {};
+    state = {
+        showingInfoWindow: false,
+        activeMarker: {},
+        selectedPlace: {}
     }
 
     onMarkerClick = (props, marker, event) => 
     {
-        this.selectedPlace = props;
-        this.activeMarker = marker;
-        this.showingInfoWindow = true;
+        this.setState({
+            selectedPlace: props,
+            activeMarker: marker,
+            showingInfoWindow: true
+        });
     }
 
     onClose = props =>
     {
-        if (this.showingInfoWindow)
+        if (this.state.showingInfoWindow)
         {
-            this.showingInfoWindow = false;
-            this.activeMarker = null;
+            this.setState({
+                showingInfoWindow: false,
+                activeMarker: null
+            });
         }
     }
 
@@ -75,8 +77,8 @@ class InteractiveMap extends Component
                         />
                     ))}
                     <InfoWindow
-                        marker={this.activeMarker}
-                        visible={true}
+                        marker={this.state.activeMarker}
+                        visible={this.state.showingInfoWindow}
                         onClose={this.onClose}
                         >
                             <div>

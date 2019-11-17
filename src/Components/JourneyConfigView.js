@@ -289,9 +289,6 @@ class ConfigureJourneyView extends React.Component {
                   <Button href="/">
                      <p>Home</p>
                   </Button>
-                  <Button href="/notice">
-                     <p>Next</p>
-                  </Button>
                </div>
                <div className="interactive-map">
                   <h2>Select Your Route</h2>

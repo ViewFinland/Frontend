@@ -13,6 +13,7 @@ class LandingPage extends React.Component {
                <Button disabled={true}>
                   <p>Login</p>
                </Button>
+               <Button href="/quizkid"> hehehe </Button>
                <Button disabled={true}>
                   <p>Sign up</p>
                </Button>

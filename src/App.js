@@ -29,7 +29,21 @@ class App extends React.Component {
               <Route path="/journeyconfig" component={JourneyConfigView}/>
               <Route path="/navigation" component={NavigationView}/>
               <Route path="/notice" render={(props) => <NoticeView text={props.text} title={props.title}/> }/>
-              <Route path="/quiz" render={(props) => <QuizView />}/>
+              <Route path="/quizkid" render={() => <QuizView 
+                            question="What is Finland called?"
+                            answerA="The land of million trees."
+                            answerB="The paradise of blueberries."
+                            answerC="The land of a thousand lakes."
+                            correctAnswer="c"
+                            description="There are around 187 888 lakes in Finland larger than 500 m2"
+                            />}/>
+              <Route path="/quizadult" render={() => <QuizView
+                            question="What is the greatest lake of Finland?"
+                            answerA="Saimaa"
+                            answerB="Päijänne"
+                            answerC="Inari"
+                            correctAnswer="a"
+                            description="Saimaa in Eastern Finland is the country’s greatest lake, and a home to the Saimaa ringed seal, one of the most endangered species in the world, and nestles several cities on its shores."/>}/>
               <Route path="/map" component={MapView}/>
             </Switch>
           </div>

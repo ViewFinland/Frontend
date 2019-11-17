@@ -1,9 +1,10 @@
 .App {
+  padding:2%;
   text-align: center;
-  background: #245027;
+  background: url('./images/googlepic1.jpg') no-repeat center;
   width: 100vw;
   height: 100vh;
-  color: white;
+  color: #335f2b;
 }
 
 .App-header {
@@ -30,14 +31,13 @@
 
 .navigation-buttons {
   position: 80vh;
-  margin: 5%;
-  padding: 5%;
 }
 
 .btn-primary {
   background-color: white !important;
   color: black !important;
   border-color: black !important;
+  margin: 5% !important;
 }
 
 .btn-primary:active .btn-primary:hover .btn-primary:selected {

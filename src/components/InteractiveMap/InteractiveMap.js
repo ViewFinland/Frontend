@@ -7,8 +7,8 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 const api_key = process.env.REACT_APP_API_KEY || "Get your shit together";
 
 const mapStyles = {
-    width: '90%',
-    height: '80%'
+    margin: '5%',
+    height: '60%'
 };
 
 class InteractiveMap extends Component

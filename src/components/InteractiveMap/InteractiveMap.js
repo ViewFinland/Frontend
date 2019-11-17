@@ -8,8 +8,8 @@ import { resolve } from 'dns';
 const api_key = process.env.REACT_APP_API_KEY || "Get your shit together";
 
 const mapStyles = {
-    width: '90%',
-    height: '80%'
+    margin: '5%',
+    height: '60%'
 };
 
 class InteractiveMap extends Component
@@ -74,6 +74,7 @@ class InteractiveMap extends Component
                             draggable={marker.draggable}
                         />
                     ))}
+<<<<<<< HEAD
                     <InfoWindow
                         marker={this.activeMarker}
                         visible={true}
@@ -101,6 +102,37 @@ class InteractiveMap extends Component
                             }}
                         />
                     ))}
+=======
+                    <Polyline
+                        //path={this.props.route.path}
+                        options={options}
+                        // onClick={
+                        //     function(event, self, meep)
+                        //     {
+                        //         console.log("---------------Pressed E:", event);
+                        //         console.log("---------------Pressed S:", self);
+                        //         console.log("---------------Pressed M:", meep);
+
+                        //         this.props.options = {
+                        //             strokeColor: "#FFF000"
+                        //         };
+                        //     }
+                        // }
+                        // geodesic={true}
+                        // options={{
+                        //     strokeColor: "#ff2527",
+                        //     strokeOpacity: 0.75,
+                        //     strokeWeight: 2
+                        //     // icons: [
+                        //     //     {
+                        //     //         // icon: lineSymbol,
+                        //     //         offset: "0",
+                        //     //         repeat: "20px"
+                        //     //     }
+                        //     // ]
+                        // }}
+                    />
+>>>>>>> 81c4e3f480b666bab08b091d1a3ea3d6feaa2f7f
                 </Map>
             </div>
         )

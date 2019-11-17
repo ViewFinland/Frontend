@@ -1,9 +1,10 @@
 .App {
+  padding:2%;
   text-align: center;
-  background: #245027;
+  background: url('./images/googlepic1.jpg') no-repeat center;
   width: 100vw;
   height: 100vh;
-  color: white;
+  color: #335f2b;
 }
 
 .App-header {
@@ -24,20 +25,20 @@
 }
 
 .select-box {
-  margin: 5%;
   border: double;
+  color: white;
+  border-color: white;
 }
 
 .navigation-buttons {
   position: 80vh;
-  margin: 5%;
-  padding: 5%;
 }
 
 .btn-primary {
   background-color: white !important;
   color: black !important;
   border-color: black !important;
+  margin: 2% !important;
 }
 
 .btn-primary:active .btn-primary:hover .btn-primary:selected {
@@ -46,4 +47,17 @@
 
 .login-buttons {
   margin-top: 15vh;
+}
+
+h1 {
+  padding-top: 3vh;
+  color: #335f2b;
+}
+h2, h3, h4 {
+  color: #ffb300;
+}
+
+.cheat-menu {
+  background: linear-gradient(#770578, #f38100);
+  color: white;
 }

@@ -22,6 +22,9 @@ class LandingPage extends React.Component {
                   <p>Plan Journey</p>
                </Button>
             </div>
+            <div>
+               <Button href="/cheat"> hehehe </Button>
+            </div>
          </div>
       )
    }

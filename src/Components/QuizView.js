@@ -9,21 +9,56 @@ class QuizView extends React.Component {
          answerA: props.answerA,
          answerB: props.answerB,
          answerC: props.answerC,
-         answerD: props.answerD,
-         correctAnswer: props.correctAnswer 
+         correctAnswer: props.correctAnswer,
+         description: props.description,
+         answeredCorrectly: false,
+         answeredWrong: false
       }
    }
 
+   submitAnswer(answer){
+       if(answer == this.state.correctAnswer){
+           console.log("ayyy");
+           this.setState({ answeredCorrectly: true });
+       }
+       else {
+           console.log("Booo");
+           this.setState({ answeredWrong: true});
+       }
+   }
+
+   getAnswerTitle(wasCorrect){
+       if(wasCorrect){
+            return  <h2>Correct!</h2>; 
+       }
+        else{ 
+            return <h2>Wrong!</h2>;
+        }
+   }
+
    render() {
+       const answered = this.state.answeredCorrectly || this.state.answeredWrong;
+       const answeredRight = this.state.answeredCorrectly; // I'm just going to uglify this as much as I can. huehue #cleanestCode
     return (
         <div>
-        <h2>{this.state.question}</h2>
-            <div className="quiz-buttons">
-                <Button>{this.state.answerA}</Button>
-                <Button>{this.state.answerB}</Button>
-                <Button>{this.state.answerC}</Button>
-                <Button>{this.state.answerD}</Button>
-            </div>
+            <h1>{this.state.question}</h1>
+            {!answered? (
+                <div className="quiz-buttons">
+                    <Button onClick={() => this.submitAnswer("a")}>{this.state.answerA}</Button>
+                    <Button onClick={() => this.submitAnswer("b")}>{this.state.answerB}</Button>
+                    <Button onClick={() => this.submitAnswer("c")}>{this.state.answerC}</Button>
+                </div>
+            ) : (
+                <div className="post-quiz">
+                    <div className="answer-description">
+                        {this.getAnswerTitle(answeredRight)}
+                        <h3>{this.state.description}</h3>
+                    </div>
+                    <div className="navigation-buttons">
+                        <Button href="/"> Home </Button>
+                    </div>
+                </div>
+            )}
         </div>
       )
    }

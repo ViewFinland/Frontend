@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import './InteractiveMap.css';
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker, InfoWindow, Polyline } from 'google-maps-react';
+import { resolve } from 'dns';
 
 const api_key = process.env.REACT_APP_API_KEY || "Get your shit together";
 
@@ -13,9 +14,13 @@ const mapStyles = {
 
 class InteractiveMap extends Component
 {
+    state = {
+        directions: null
+    }
+    
     componentDidMount()
     {
-        console.log("Api Key:", api_key);
+        
     }
 
     render()
@@ -24,6 +29,12 @@ class InteractiveMap extends Component
         {
             return <div>Loading...</div>
         }
+
+        let options = {
+            strokeColor: "#ff2527"
+        };
+
+
         return (
             <div ref="map">
                 <Map
@@ -52,6 +63,35 @@ class InteractiveMap extends Component
                             draggable={marker.draggable}
                         />
                     ))}
+                    <Polyline
+                        path={this.props.route.path}
+                        options={options}
+                        // onClick={
+                        //     function(event, self, meep)
+                        //     {
+                        //         console.log("---------------Pressed E:", event);
+                        //         console.log("---------------Pressed S:", self);
+                        //         console.log("---------------Pressed M:", meep);
+
+                        //         this.props.options = {
+                        //             strokeColor: "#FFF000"
+                        //         };
+                        //     }
+                        // }
+                        // geodesic={true}
+                        // options={{
+                        //     strokeColor: "#ff2527",
+                        //     strokeOpacity: 0.75,
+                        //     strokeWeight: 2
+                        //     // icons: [
+                        //     //     {
+                        //     //         // icon: lineSymbol,
+                        //     //         offset: "0",
+                        //     //         repeat: "20px"
+                        //     //     }
+                        //     // ]
+                        // }}
+                    />
                 </Map>
             </div>
         )

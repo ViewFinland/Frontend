@@ -8,7 +8,6 @@ class MapView extends Component
     state = {
         markers: [
             {
-                id: 0,
                 title: "Meep 1",
                 label: "Ugh",
                 lat: 60.314213,
@@ -16,7 +15,6 @@ class MapView extends Component
                 url: "http://localhost:8080/api/img/30"
             },
             {
-                id: 1,
                 title: "Meep 2",
                 label: "Ugh 2",
                 lat: 60.312223,
@@ -24,7 +22,6 @@ class MapView extends Component
                 url: "http://localhost:8080/api/img/0"
             },
             {
-                id: 3,
                 title: "Meep 3",
                 label: "Ugh 3",
                 lat: 60.303233,
@@ -32,20 +29,38 @@ class MapView extends Component
                 url: "http://localhost:8080/api/img/10"
             }
         ],
-        route: {
-            origin: {lat: 60.314213, lng: 24.484465},
-            destination: {lat: 60.314600, lng: 24.484470},
-            path: [
-                {lat: 60.314213, lng: 24.484465},
-                {lat: 60.314253, lng: 24.484465},
-                {lat: 60.314303, lng: 24.484465},
-                {lat: 60.314353, lng: 24.484465},
-                {lat: 60.314403, lng: 24.484465},
-                {lat: 60.314453, lng: 24.484465},
-                {lat: 60.314503, lng: 24.484465},
-                {lat: 60.414553, lng: 24.684465},
-            ]
-        }
+        routes: [
+            {
+                origin: {lat: 60.314213, lng: 24.484465},
+                destination: {lat: 60.314600, lng: 24.484470},
+                colour: "#000000",
+                path: [
+                    {lat: 60.314213, lng: 24.484465},
+                    {lat: 60.314253, lng: 24.484465},
+                    {lat: 60.314303, lng: 24.484465},
+                    {lat: 60.314353, lng: 24.484465},
+                    {lat: 60.314403, lng: 24.484465},
+                    {lat: 60.314453, lng: 24.484465},
+                    {lat: 60.314503, lng: 24.484465},
+                    {lat: 60.414553, lng: 24.684465},
+                ]
+            },
+            {
+                origin: {lat: 60.314213, lng: 24.484465},
+                destination: {lat: 60.314600, lng: 24.484470},
+                colour: "#000fff",
+                path: [
+                    {lat: 60.315213, lng: 24.484465},
+                    {lat: 60.315253, lng: 24.484465},
+                    {lat: 60.315303, lng: 24.484465},
+                    {lat: 60.315353, lng: 24.484465},
+                    {lat: 60.315403, lng: 24.484465},
+                    {lat: 60.315453, lng: 24.484465},
+                    {lat: 60.315503, lng: 24.484465},
+                    {lat: 60.415553, lng: 24.684465},
+                ]
+            }
+        ]
     }
 
     render()
@@ -55,7 +70,7 @@ class MapView extends Component
                 <h2>Interactive Map</h2>
                 <InteractiveMap 
                     markers={this.state.markers}
-                    route={this.state.route}
+                    routes={this.state.routes}
                 />
             </div>
         )

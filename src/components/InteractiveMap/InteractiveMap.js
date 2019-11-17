@@ -14,13 +14,28 @@ const mapStyles = {
 
 class InteractiveMap extends Component
 {
-    state = {
-        directions: null
-    }
-    
-    componentDidMount()
+    constructor(props)
     {
-        
+        super(props);
+        this.showingInfoWindow = false;
+        this.activeMarker = {};
+        this.selectedPlace = {};
+    }
+
+    onMarkerClick = (props, marker, event) => 
+    {
+        this.selectedPlace = props;
+        this.activeMarker = marker;
+        this.showingInfoWindow = true;
+    }
+
+    onClose = props =>
+    {
+        if (this.showingInfoWindow)
+        {
+            this.showingInfoWindow = false;
+            this.activeMarker = null;
+        }
     }
 
     render()
@@ -29,11 +44,6 @@ class InteractiveMap extends Component
         {
             return <div>Loading...</div>
         }
-
-        let options = {
-            strokeColor: "#ff2527"
-        };
-
 
         return (
             <div ref="map">
@@ -47,10 +57,11 @@ class InteractiveMap extends Component
                         lng: 24.480455
                     }}
                 >
-                    {this.props.markers.map(marker => (
+                    {this.props.markers.map((marker, index) => (
                         <Marker
+                            key={index}
+                            onClick={this.onMarkerClick}
                             position={{ lat: marker.lat, lng: marker.lng }}
-                            key={marker.id}
                             title={marker.title}
                             icon={{
                                 url: marker.url,
@@ -63,35 +74,33 @@ class InteractiveMap extends Component
                             draggable={marker.draggable}
                         />
                     ))}
-                    <Polyline
-                        path={this.props.route.path}
-                        options={options}
-                        // onClick={
-                        //     function(event, self, meep)
-                        //     {
-                        //         console.log("---------------Pressed E:", event);
-                        //         console.log("---------------Pressed S:", self);
-                        //         console.log("---------------Pressed M:", meep);
-
-                        //         this.props.options = {
-                        //             strokeColor: "#FFF000"
-                        //         };
-                        //     }
-                        // }
-                        // geodesic={true}
-                        // options={{
-                        //     strokeColor: "#ff2527",
-                        //     strokeOpacity: 0.75,
-                        //     strokeWeight: 2
-                        //     // icons: [
-                        //     //     {
-                        //     //         // icon: lineSymbol,
-                        //     //         offset: "0",
-                        //     //         repeat: "20px"
-                        //     //     }
-                        //     // ]
-                        // }}
-                    />
+                    <InfoWindow
+                        marker={this.activeMarker}
+                        visible={true}
+                        onClose={this.onClose}
+                        >
+                            <div>
+                                <h4>Meep</h4>
+                            </div>
+                    </InfoWindow>
+                    {this.props.routes.map((route, index) => (
+                        <Polyline
+                            key={index}
+                            path={route.path}
+                            geodesic={true}
+                            options={{
+                                strokeColor: route.colour,
+                                strokeOpacity: 0.75,
+                                strokeWeight: 3,
+                                icons: [
+                                    {
+                                        offset: "0",
+                                        repeat: "20px"
+                                    }
+                                ]
+                            }}
+                        />
+                    ))}
                 </Map>
             </div>
         )

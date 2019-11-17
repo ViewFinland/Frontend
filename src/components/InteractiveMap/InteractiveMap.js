@@ -5,7 +5,7 @@ import './InteractiveMap.css';
 import { Map, GoogleApiWrapper, Marker, InfoWindow, Polyline } from 'google-maps-react';
 import { resolve } from 'dns';
 
-const api_key = process.env.REACT_APP_API_KEY || "Get your shit together";
+const api_key = process.env.REACT_APP_API_KEY || "Put your API Key to an environment variable.";
 
 const mapStyles = {
     margin: '5%',

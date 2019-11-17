@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Playlist from 'react-mp3-player';
-import soundfile from './Audio/slow_food_insight.mp3';
+import soundfile from '../Audio/slow_food_insight.mp3';
 
 const playlistOverideStylingOpts = {
    offset : {

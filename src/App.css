@@ -53,11 +53,11 @@ h1 {
   padding-top: 3vh;
   color: #335f2b;
 }
-h2 {
+h2, h3, h4 {
   color: #ffb300;
 }
 
 .cheat-menu {
-  background: linear-gradient(#480349, #ffb300);
+  background: linear-gradient(#770578, #f38100);
   color: white;
 }

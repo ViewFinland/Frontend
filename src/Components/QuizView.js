@@ -52,12 +52,10 @@ class QuizView extends React.Component {
                 <div className="post-quiz">
                     <div className="answer-description">
                         {this.getAnswerTitle(answeredRight)}
-                        <h2>{this.state.description}</h2>
+                        <h3>{this.state.description}</h3>
                     </div>
                     <div className="navigation-buttons">
-                        <Button href="/navigation"> Back </Button>
-                        <Button href="/quizkid"> Kid </Button>
-                        <Button href="/quizadult"> Adult </Button>
+                        <Button href="/"> Home </Button>
                     </div>
                 </div>
             )}

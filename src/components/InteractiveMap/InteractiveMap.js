@@ -64,7 +64,7 @@ class InteractiveMap extends Component
                         />
                     ))}
                     <Polyline
-                        path={this.props.route.path}
+                        //path={this.props.route.path}
                         options={options}
                         // onClick={
                         //     function(event, self, meep)

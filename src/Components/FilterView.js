@@ -46,15 +46,15 @@ class FilterView extends React.Component {
                     <ToggleButton value="hiker" onClick={() => this.setTravellerType("Hiker")}>Hiker</ToggleButton>
                     <ToggleButton value="family" onClick={() => this.setTravellerType("Family")}>Family</ToggleButton>
                     <ToggleButton value="biker" onClick={() => this.setTravellerType("Biker")}>Biker</ToggleButton>
-                    <ToggleButton value="chum" onClick={() => this.setTravellerType("Chum")}>Just a chum.</ToggleButton>
+                    <ToggleButton value="chum" onClick={() => this.setTravellerType("Elder")}>Elder</ToggleButton>
                 </ToggleButtonGroup>
             </div>
             <div className="select-box">
         <h2>Difficulty: {this.state.difficultyLevel}</h2>
                 <ToggleButtonGroup type="radio" name="Difficulty">
-                    <ToggleButton value="easy" onClick={() => this.setDifficulty("Easy")}>Let's just chill.</ToggleButton>
-                    <ToggleButton value="medium" onClick={() => this.setDifficulty("Medium")}>Maybe some challenge.</ToggleButton>
-                    <ToggleButton value="hard" onClick={() => this.setDifficulty("Hard")}>Bring it!</ToggleButton>
+                    <ToggleButton value="easy" onClick={() => this.setDifficulty("Easy")}>Easy</ToggleButton>
+                    <ToggleButton value="medium" onClick={() => this.setDifficulty("Medium")}>Medium</ToggleButton>
+                    <ToggleButton value="hard" onClick={() => this.setDifficulty("Hard")}>Hard</ToggleButton>
                 </ToggleButtonGroup>
             </div>
             <div className="select-box">
@@ -63,10 +63,10 @@ class FilterView extends React.Component {
                     <ToggleButtonGroup type="checkbox" name="Activities">
                         <ToggleButton value="Hiking" onChange={() => this.setActivities("Hiking")}>Hiking</ToggleButton>
                         <ToggleButton value="activity 2"onChange={() => this.setActivities("Camping")}>Camping</ToggleButton>
-                        <ToggleButton value="activity 3"onChange={() => this.setActivities("Act3")}>Act3</ToggleButton>
+                        <ToggleButton value="activity 3"onChange={() => this.setActivities("Fishing")}>Fishing</ToggleButton>
                     </ToggleButtonGroup>
                     <ToggleButtonGroup type="checkbox" name="Activities">
-                        <ToggleButton value="activity 4"onChange={() => this.setActivities("Act4")}>Act4</ToggleButton>
+                        <ToggleButton value="activity 4"onChange={() => this.setActivities("Canoeing")}>Canoeing</ToggleButton>
                         <ToggleButton value="activity 5"onChange={() => this.setActivities("Act5")}>Act5</ToggleButton>
                         <ToggleButton value="activity 6"onChange={() => this.setActivities("Act6")}>Act6</ToggleButton>
                     </ToggleButtonGroup>

@@ -281,23 +281,25 @@ class ConfigureJourneyView extends React.Component {
     render() {
        return (
 
-          <div>
-            <div className="interactive-map">{
-               //<h2>Interactive Map</h2>
-               //<InteractiveMap markers={this.state.markers} />
-            }
-            </div>
-             <div className="navigation-buttons">
-                <Button href="/filtering">
-                  <p>Back</p>
-               </Button>
-               <Button href="/">
-                  <p>Home</p>
-               </Button>
-               <Button href="/notice">
-                  <p>Next</p>
-               </Button>
-            </div>
+          <div className="journey-layout">
+               <div className="navigation-buttons">
+                  <Button href="/filtering">
+                     <p>Back</p>
+                  </Button>
+                  <Button href="/">
+                     <p>Home</p>
+                  </Button>
+                  <Button href="/notice">
+                     <p>Next</p>
+                  </Button>
+               </div>
+               <div className="interactive-map">
+                  <h2>Select Your Route</h2>
+                  <InteractiveMap 
+                     markers={this.state.markers}
+                     routes={this.state.routes}
+                  />
+               </div>
           </div>
        )
     }

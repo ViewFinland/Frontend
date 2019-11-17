@@ -40,9 +40,10 @@ class ConfigureJourneyView extends React.Component {
     render() {
        return (
           <div>
-            <div className="interactive-map">
-                <h2>Interactive Map</h2>
-                <InteractiveMap markers={this.state.markers} />
+            <div className="interactive-map">{
+               //<h2>Interactive Map</h2>
+               //<InteractiveMap markers={this.state.markers} />
+            }
             </div>
              <div className="navigation-buttons">
                 <Button href="/filtering">

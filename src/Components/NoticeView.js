@@ -1,5 +1,18 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import Playlist from 'react-mp3-player';
+import soundfile from './Audio/slow_food_insight.mp3';
+
+const playlistOverideStylingOpts = {
+   offset : {
+     left : 300
+   },
+   breakpoint : {
+     maxWidth : 768
+     }
+ };
+
+ const tracks = [ soundfile ];
 
 class NoticeView extends React.Component {
    constructor(props){
@@ -10,10 +23,12 @@ class NoticeView extends React.Component {
       }
    }
 
+   
    render() {
       return (
          <div>
          <h1>{this.state.title}</h1>
+         <Playlist tracks={tracks} opts={playlistOverideStylingOpts}/>
          <p>{this.state.text}</p>
 
          <div className="navigation-buttons">
